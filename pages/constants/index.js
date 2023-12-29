@@ -1,0 +1,22 @@
+import { FR, meta, shopify, starbucks, tesla } from "../assets/images";
+import {
+  car,
+  css,
+  estate,
+  express,
+  git,
+  github,
+  html,
+  javascript,
+  mongodb,
+  mui,
+  nextjs,
+  nodejs,
+  pricewise,
+  react,
+  snapgram,
+  tailwindcss,
+  threads,
+  python,
+  java,
+} from "../assets/icons";

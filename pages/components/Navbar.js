@@ -3,6 +3,7 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Yoda from "../../public/images/baby-yoda-hi.gif"
 import Image from "next/image";
+import Link from "next/link";
 const navigation = [
   { name: "Home", href: "/DashBoard/Home" },
   { name: "About", href: "/DashBoard/About" },
@@ -13,13 +14,13 @@ export function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white">
-      <header className=" inset-x-0 top-0 z-50">
+    <div className="bg-transparent">
+      <header className=" inset-x-0 top-0 z-50 bg-transparent">
         <nav
-          className="flex items-center justify-between p-6 lg:px-8"
+          className="flex items-center justify-between p-6 lg:px-8 bg-transparent"
           aria-label="Global"
         >
-          <div className="flex lg:flex-1">
+          <div className="flex lg:flex-1 bg-transparent">
             <a href="/DashBoard/Home" className="-m-1.5 p-1.5">
               <span className="sr-only">Balance Yoda</span>
               <Image
@@ -29,31 +30,31 @@ export function Home() {
               />
             </a>
           </div>
-          <div className="flex lg:hidden">
+          <div className="flex lg:hidden bg-transparent">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white bg-transparent"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
+          <div className="hidden lg:flex lg:gap-x-12 bg-transparent">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-xl font-extrabold m-10 leading-8 text-white  navigateLinks"
+                className="text-xl font-extrabold m-10 leading-8 text-white  navigateLinks bg-transparent"
               >
                 {item.name}
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end bg-transparent">
             <a
               href="/profile/Login"
-              className="text-xl font-extrabold leading-8 text-white navigateLinks"
+              className="text-xl font-extrabold leading-8 text-white navigateLinks bg-transparent"
             >
               Log in <span aria-hidden="true" className="hover:text-green-500 bg-transparent">&rarr;</span>
             </a>
@@ -66,10 +67,10 @@ export function Home() {
           onClose={setMobileMenuOpen}
         >
           <div className="fixed inset-0 z-50" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-transparent px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">Balance Yoda</span>
                 <Image
                   className="h-10 w-20 bg-transparent rounded-full ImageGlow"
                   src={Yoda}
@@ -78,7 +79,7 @@ export function Home() {
               </a>
               <button
                 type="button"
-                className="-m-2.5 rounded-md p-2.5 text-white"
+                className="-m-2.5 rounded-md p-2.5 text-white bg-transparent"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
@@ -92,19 +93,19 @@ export function Home() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base bg-transparent font-semibold leading-7 text-white hover:bg-gray-500"
                     >
                       {item.name}
                     </a>
                   ))}
                 </div>
                 <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 bg-white hover:bg-gray-500"
+                  <Link
+                    href="/profile/Login.js"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base bg-transparent font-semibold leading-7 bg-white hover:bg-gray-500"
                   >
                     Log in
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
