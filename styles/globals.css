@@ -355,6 +355,19 @@ body:has(.card[data-color="green"]:hover) {
   text-shadow: 0 0 10px rgb(22 163 74), 0 0 15px rgb(22 163 74),
     0 0 20px rgb(22 163 74);
 }
-.forgotBox{
-  box-shadow: 0 0 15px rgb(22 163 74) ;
+.forgotBox {
+  box-shadow: 0 0 15px rgb(22 163 74);
+}
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  scrollbar-shadow-color: 0 0 15px rgb(22 163 74);
+  border-radius: 50px;
+  background: linear-gradient(rgb(0, 176, 65), rgb(169, 255, 201));
 }

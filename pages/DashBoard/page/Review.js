@@ -40,7 +40,7 @@ export default function Review() {
               >
                 <circle cx={1} cy={1} r={1} />
               </svg>
-              <div className="text-gray-400" gray-text-gray-400>
+              <div className="text-gray-400">
                 CEO of Infinity
               </div>
             </div>

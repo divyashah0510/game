@@ -25,7 +25,7 @@ export function Navbar() {
             <a href="/DashBoard/MainHome" className="-m-1.5 p-1.5">
               <span className="sr-only">Balance Yoda</span>
               <Image
-                className="h-20 w-40 bg-transparent rounded-full ImageGlow"
+                className="h-10 w-20 bg-transparent rounded-full ImageGlow"
                 src={Yoda}
                 alt="My Logo"
               />
