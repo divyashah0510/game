@@ -57,13 +57,7 @@ export function Navbar() {
               href="/profile/SignUp"
               className="text-xl font-extrabold leading-8 text-white navigateLinks bg-transparent"
             >
-              Log in{" "}
-              <span
-                aria-hidden="true"
-                className="hover:text-green-500 bg-transparent"
-              >
-                &rarr;
-              </span>
+              Log in &rarr;
             </a>
           </div>
         </nav>
