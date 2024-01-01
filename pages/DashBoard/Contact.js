@@ -4,7 +4,6 @@ import Earth from "../models/Earth";
 import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert";
 
-
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -25,8 +24,8 @@ const Contact = () => {
     setCurrentAnimation("hit");
     emailjs
       .send(
-        process.env.NEXT_APP_EMAILJS_SERVICE_ID,
-        process.env.NEXT_APP_EMAILJS_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "JavaScript Mastery",
@@ -34,7 +33,7 @@ const Contact = () => {
           to_email: "sujata@jsmastery.pro",
           message: form.message,
         },
-        process.env.NEXT_APP_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
       )
       .then(
         () => {
@@ -70,18 +69,20 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative flex lg:flex-row flex-col max-container">
+    <section className="relative flex lg:flex-row flex-col max-container bg-transparent">
       {alert.show && <Alert {...alert} />}
 
-      <div className="flex-1 min-w-[50%] flex flex-col">
-        <h1 className="head-text">Get in Touch</h1>
+      <div className="flex-1 min-w-[60%] flex flex-col bg-transparent">
+        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-7xl leading-loose homeGlow bg-transparent">
+          Get in Touch
+        </h1>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="w-full flex flex-col gap-7 mt-11"
+          className="w-full flex flex-col gap-8 mt-11 bg-transparent"
         >
-          <label className="text-black-500 font-semibold">
+          <label className="text-green-500 font-semibold labelGlow bg-transparent">
             Name
             <input
               type="text"
@@ -95,7 +96,7 @@ const Contact = () => {
               onBlur={handleBlur}
             />
           </label>
-          <label className="text-black-500 font-semibold">
+          <label className="text-green-500 font-semibold labelGlow bg-transparent">
             Email
             <input
               type="email"
@@ -109,12 +110,12 @@ const Contact = () => {
               onBlur={handleBlur}
             />
           </label>
-          <label className="text-black-500 font-semibold">
+          <label className="text-green-500 font-semibold labelGlow bg-transparent">
             Your Message
             <textarea
               name="message"
               rows="4"
-              className="textarea"
+              className="textarea bg-white"
               placeholder="Write your thoughts here..."
               value={form.message}
               onChange={handleChange}
@@ -126,7 +127,7 @@ const Contact = () => {
           <button
             type="submit"
             disabled={loading}
-            className="btn"
+            className="btnGlow"
             onFocus={handleFocus}
             onBlur={handleBlur}
           >
@@ -135,8 +136,8 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
-        <Earth currentAnimation={currentAnimation} />
+      <div className="lg:w-11/12 md:w-1/2 md:h-[400px] sm:h-[300px] bg-transparent">
+        <Earth currentAnimation={currentAnimation} className="bg-transparent"/>
       </div>
     </section>
   );

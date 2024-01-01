@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const Home = () => {
+const MainHome = () => {
   return (
     <div className="lg:px-6 bg-transparent myHome">
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-44 bg-transparent">
@@ -39,4 +39,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default MainHome;

@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Yoda from "../../public/images/baby-yoda-hi.gif"
+import Yoda from "../../public/images/baby-yoda-hi.gif";
 import Image from "next/image";
 import Link from "next/link";
 const navigation = [
-  { name: "Home", href: "/DashBoard/Home" },
+  { name: "Home", href: "/DashBoard/MainHome" },
   { name: "About", href: "/DashBoard/About" },
+  { name: "Play", href: "/DashBoard/Play" },
   { name: "Contact", href: "/DashBoard/Contact" },
 ];
 
-export function Home() {
+export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -21,7 +22,7 @@ export function Home() {
           aria-label="Global"
         >
           <div className="flex lg:flex-1 bg-transparent">
-            <a href="/DashBoard/Home" className="-m-1.5 p-1.5">
+            <a href="/DashBoard/MainHome" className="-m-1.5 p-1.5">
               <span className="sr-only">Balance Yoda</span>
               <Image
                 className="h-20 w-40 bg-transparent rounded-full ImageGlow"
@@ -53,10 +54,16 @@ export function Home() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end bg-transparent">
             <a
-              href="/profile/Login"
+              href="/profile/SignUp"
               className="text-xl font-extrabold leading-8 text-white navigateLinks bg-transparent"
             >
-              Log in <span aria-hidden="true" className="hover:text-green-500 bg-transparent">&rarr;</span>
+              Log in{" "}
+              <span
+                aria-hidden="true"
+                className="hover:text-green-500 bg-transparent"
+              >
+                &rarr;
+              </span>
             </a>
           </div>
         </nav>
@@ -101,7 +108,7 @@ export function Home() {
                 </div>
                 <div className="py-6">
                   <Link
-                    href="/profile/Login.js"
+                    href="/profile/SignUp"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base bg-transparent font-semibold leading-7 bg-white hover:bg-gray-500"
                   >
                     Log in
@@ -115,4 +122,4 @@ export function Home() {
     </div>
   );
 }
-export default Home;
+export default Navbar;

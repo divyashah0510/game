@@ -31,7 +31,7 @@ body:has(.card[data-color="green"]:hover) {
 
 @layer utilities {
   .max-container {
-    @apply max-w-5xl mx-auto sm:p-16 pb-1 !pt-[126px] px-8 min-h-[calc(100vh-10px)];
+    @apply max-w-[80%] mx-auto sm:p-16 pb-1 !pt-[126px] px-8 min-h-[calc(100vh-10px)];
   }
   .head-text {
     @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
@@ -51,15 +51,14 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .input {
-    @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
+    @apply bg-transparent border border-green-600 text-white text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-[99%] p-2.5 mt-2.5 font-normal shadow-card;
   }
 
   .textarea {
-    @apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal shadow-card;
+    @apply block p-2.5 w-[99%] text-sm text-white bg-transparent rounded-lg border border-green-600 focus:ring-green-600 focus:border-green-600 mt-2.5 font-normal shadow-card;
   }
-
-  .btn {
-    @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+  .btnGlow {
+    @apply text-white bg-gradient-to-r from-[#16a34a] to-[#166534] focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-xl text-base w-[99%] sm:w-auto py-2.5 text-center;
   }
 
   .header {
@@ -251,6 +250,10 @@ body:has(.card[data-color="green"]:hover) {
 .homeGlow {
   text-shadow: 0 0 25px rgb(22 163 74);
 }
+.labelGlow:hover {
+  text-shadow: 0 0 10px rgb(22 163 74), 0 0 15px rgb(22 163 74),
+    0 0 20px rgb(22 163 74), 0 0 25px white;
+}
 .ImageGlow:hover {
   box-shadow: 0 0 30px white;
 }
@@ -305,8 +308,6 @@ body:has(.card[data-color="green"]:hover) {
     0 0 20px rgb(22 163 74), 0 0 25px white, 0 0 30px white;
 }
 
-
-
 /* Carousel CSS */
 @layer base {
   /* body {
@@ -349,4 +350,11 @@ body:has(.card[data-color="green"]:hover) {
   .carousel-item {
     @apply absolute h-full w-full cursor-pointer overflow-hidden rounded-3xl drop-shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-700 ease-in-out;
   }
+}
+.LoginHead {
+  text-shadow: 0 0 10px rgb(22 163 74), 0 0 15px rgb(22 163 74),
+    0 0 20px rgb(22 163 74);
+}
+.forgotBox{
+  box-shadow: 0 0 15px rgb(22 163 74) ;
 }

@@ -1,3 +1,6 @@
+import { faMeta } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function Review() {
   return (
     <section className="relative isolate overflow-hidden bg-transparent mt-28 px-6 py-24 sm:py-32 lg:px-8">
@@ -7,11 +10,11 @@ export default function Review() {
         Our Reviews
       </h1>
       <div className="mx-auto max-w-2xl lg:max-w-4xl bg-transparent">
-        <img
-          className="mx-auto h-12 bg-opacity-1"
-          src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg"
-          alt=""
+        <FontAwesomeIcon
+          className="mx-auto h-12 bg-opacity-1 flex"
+          icon={faMeta}
         />
+
         <figure className="mt-10">
           <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9 bg-transparent bg-opacity-50">
             <p>
@@ -38,7 +41,7 @@ export default function Review() {
                 <circle cx={1} cy={1} r={1} />
               </svg>
               <div className="text-gray-400" gray-text-gray-400>
-                CEO of Workcation
+                CEO of Infinity
               </div>
             </div>
           </figcaption>
