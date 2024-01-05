@@ -8,107 +8,46 @@ import "react-vertical-timeline-component/style.min.css";
 
 export const experiences = [
   {
-    title: "Java Developer",
-    company_name: "Second Year of Engineering",
+    title: "Title 1",
+    company_name: "Some text",
     // icon: java,
-    iconBg: "#accbe1",
+    iconBg: "#16a34a",
     date: "July 2022 - Nov 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea rerum reprehenderit repellat soluta aspernatur voluptate quam. Eos hic illum dolores labore fuga explicabo voluptatum perferendis expedita esse doloremque! Doloribus, at!",
     ],
   },
   {
-    title: "Python Developer",
-    company_name: "Second Year Engineering",
-    // icon: python,
-    iconBg: "#fbc3bc",
-    date: "Jan 2023 - Apr 2023",
+    title: "Title 2",
+    company_name: "Some text",
+    // icon: java,
+    iconBg: "white",
+    date: "July 2022 - Nov 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea rerum reprehenderit repellat soluta aspernatur voluptate quam. Eos hic illum dolores labore fuga explicabo voluptatum perferendis expedita esse doloremque! Doloribus, at!",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Exposys Data Lab",
-    // icon: mui,
-    iconBg: "#b7e4c7",
-    date: "May 2023 - June 2023",
+    title: "Title 3",
+    company_name: "Some text",
+    // icon: java,
+    iconBg: "#16a34a",
+    date: "July 2022 - Nov 2022",
     points: [
-      "Developing and maintaining web applications using html, css and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea rerum reprehenderit repellat soluta aspernatur voluptate quam. Eos hic illum dolores labore fuga explicabo voluptatum perferendis expedita esse doloremque! Doloribus, at!",
     ],
   },
   {
-    title: "Frontend Developer",
-    company_name: "Third Year Engineering",
-    // icon: react,
-    iconBg: "#a2d2ff",
-    date: "July 2023 - Present",
+    title: "Title 4",
+    company_name: "Some text",
+    // icon: java,
+    iconBg: "white",
+    date: "July 2022 - Nov 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea rerum reprehenderit repellat soluta aspernatur voluptate quam. Eos hic illum dolores labore fuga explicabo voluptatum perferendis expedita esse doloremque! Doloribus, at!",
     ],
   },
-];
-
-export const projects = [
-  {
-    // iconUrl: pricewise,
-    theme: "btn-back-red",
-    name: "Python Based Web Scraper",
-    description:
-      "Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.",
-    link: "https://github.com/divyashah0510/Product-Analyser",
-  },
-  {
-    // iconUrl: threads,
-    theme: "btn-back-green",
-    name: "iNoteBook",
-    description:
-      "Created a full-stack Web app which performs basic crud operations with database connections",
-    link: "https://github.com/divyashah0510/inotebook",
-  },
-  {
-    // iconUrl: car,
-    theme: "btn-back-blue",
-    name: "Password Generator App",
-    description: "Designed and built a desktop app for storing passwords.",
-    link: "https://github.com/divyashah0510/PasswordGenerator",
-  },
-  {
-    // iconUrl: snapgram,
-    theme: "btn-back-pink",
-    name: "Society Maintenance App",
-    description:
-      "Built a complete java application of Society Maintenance , allowing user friendly UI and easing the societal work.",
-    link: "https://github.com/divyashah0510/sms",
-  },
-  {
-    // iconUrl: estate,
-    theme: "btn-back-black",
-    name: "Mail Dispatcher Application",
-    description:
-      "Developed a web application for sending mass mail messages to various customers",
-    link: "https://github.com/divyashah0510/Mail_Dispatcher",
-  },
-  {
-    // iconUrl: FR,
-    theme: "btn-back-yellow",
-    name: "E-Commerce Web Application",
-    description:
-      "Created family owned business online web app called FitRight .",
-    link: "https://github.com/akshayrathod205/Sem5-MPR-Frontend",
-  },
+  
 ];
 
 const Timeline = () => {

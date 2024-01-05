@@ -1,6 +1,61 @@
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function SignUp() {
+  const [name, setname] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  // Handling Change Function
+  const handleChange = (e) => {
+    if (e.target.name === "name") {
+      setname(e.target.value);
+    } else if (e.target.email === "email") {
+      setEmail(e.target.value);
+    } else if (e.target.password === "password") {
+      setPassword(e.target.value);
+    }
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = { name, email, password };
+    let res = await fetch("http://localhost:3000/api/addUser", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    let response = await res.json();
+    console.log(response);
+    setEmail("");
+    setname("");
+    setPassword("");
+    toast.success("🦄 Account created Successfully!", {
+      position: "bottom-center",
+      autoClose: 7000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
+
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-transparent">
+      <ToastContainer
+        position="bottom-center"
+        autoClose={7000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <div className="sm:mx-auto sm:w-full sm:max-w-sm bg-transparent">
         <img
           className="mx-auto h-28 w-28 bg-transparent"
@@ -16,7 +71,11 @@ export default function SignUp() {
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-transparent">
-        <form className="space-y-6 bg-transparent" action="#" method="POST">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-6 bg-transparent"
+          method="POST"
+        >
           <div className="bg-transparent">
             <label
               htmlFor="name"
@@ -26,6 +85,8 @@ export default function SignUp() {
             </label>
             <div className="mt-2 flex justify-center items-center bg-transparent">
               <input
+                value={name}
+                onChange={handleChange}
                 id="name"
                 name="name"
                 type="name"
@@ -45,6 +106,8 @@ export default function SignUp() {
             </label>
             <div className="mt-2 flex justify-center items-center bg-transparent">
               <input
+                value={email}
+                onChange={handleChange}
                 id="email"
                 name="email"
                 type="email"
@@ -75,6 +138,8 @@ export default function SignUp() {
             </div>
             <div className="mt-2 bg-transparent flex justify-center items-center">
               <input
+                value={password}
+                onChange={handleChange}
                 id="password"
                 name="password"
                 type="password"

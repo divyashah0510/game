@@ -352,7 +352,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 }
 .LoginHead {
-  text-shadow: 0 0 10px rgb(22 163 74), 0 0 15px rgb(22 163 74),
+  text-shadow: 0 0 10px rgb(22, 162, 73), 0 0 15px rgb(22 163 74),
     0 0 20px rgb(22 163 74);
 }
 .forgotBox {

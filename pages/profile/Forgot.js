@@ -14,7 +14,7 @@ const Forgot = () => {
 
         <form action="" className="my-10 bg-transparent">
           <div className="flex flex-col space-y-5 bg-transparent">
-            <label for="email" className="bg-transparent">
+            <label htmlFor="email" className="bg-transparent">
               <p className="font-medium text-green-800 pb-2 bg-transparent">
                 Email address
               </p>

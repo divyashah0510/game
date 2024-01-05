@@ -1,12 +1,14 @@
+import Spline from "@splinetool/react-spline";
+
 export default function Login() {
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-transparent mt-28 mb-28">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm bg-transparent">
-        <img
+        {/* <img
           className="mx-auto h-28 w-28 bg-transparent"
           src="/images/yoda.png"
           alt="Your Company"
-        />
+        /> */}
         <h2 className="mt-10 text-center text-2xl font-extrabold leading-9 tracking-widest text-green-600 LoginHead bg-transparent">
           Sign in to your account
         </h2>
@@ -43,7 +45,10 @@ export default function Login() {
                 Password
               </label>
               <div className="text-sm bg-transparent">
-                <a href="/profile/Forgot" className="font-semibold bg-transparent text-green-600 hover:text-green-500 hover:shadow-white">
+                <a
+                  href="/profile/Forgot"
+                  className="font-semibold bg-transparent text-green-600 hover:text-green-500 hover:shadow-white"
+                >
                   Forgot password?
                 </a>
               </div>
@@ -81,6 +86,7 @@ export default function Login() {
           </a>
         </p>
       </div>
+      {/* Add Spline Component */}
     </div>
   );
 }

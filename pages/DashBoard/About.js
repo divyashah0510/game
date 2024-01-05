@@ -57,7 +57,7 @@ const About = () => {
                       />
                     </svg>
                   </div>
-                  First Statement
+                  First Heading
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-gray-400 bg-transparent">
                   Morbi viverra dui mi arcu sed. Tellus semper adipiscing
@@ -82,7 +82,7 @@ const About = () => {
                       />
                     </svg>
                   </div>
-                  SSL certificates
+                  Second Heading
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-gray-400 bg-transparent">
                   Sit quis amet rutrum tellus ullamcorper ultricies libero dolor
@@ -107,7 +107,7 @@ const About = () => {
                       />
                     </svg>
                   </div>
-                  Simple queues
+                  Third Heading
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-gray-400 bg-transparent">
                   Quisque est vel vulputate cursus. Risus proin diam nunc
@@ -132,7 +132,7 @@ const About = () => {
                       />
                     </svg>
                   </div>
-                  Advanced security
+                  Fourth Heading
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-gray-400 bg-transparent">
                   Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt
@@ -151,7 +151,7 @@ const About = () => {
       {/* Timeline Section */}
       <Timeline />
       {/* Customer Reviews Section */}
-      <Review/>
+      <Review />
     </div>
   );
 };
