@@ -1,8 +1,69 @@
 import Spline from "@splinetool/react-spline";
-
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import router from 'next/router'
 export default function Login() {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  // Handling Change Function
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    if (name === "email") {
+      setEmail(value);
+    } else if (name === "password") {
+      setPassword(value);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = { email, password };
+    try {
+      const response = await fetch("http://localhost:3000/api/login", {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      console.log("Success:", result);
+      setEmail("");
+      setPassword("");
+      if (response.success) {
+        toast.success("🦄 logged in Successfully!", {
+          position: "bottom-center",
+          autoClose: 7000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+        router.push("http://localhost:3000/");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-transparent mt-28 mb-28">
+      <ToastContainer
+        position="bottom-center"
+        autoClose={7000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <div className="sm:mx-auto sm:w-full sm:max-w-sm bg-transparent">
         {/* <img
           className="mx-auto h-28 w-28 bg-transparent"
@@ -15,7 +76,11 @@ export default function Login() {
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-transparent">
-        <form className="space-y-6 bg-transparent" action="#" method="POST">
+        <form
+          className="space-y-6 bg-transparent"
+          onSubmit={handleSubmit}
+          method="POST"
+        >
           <div className="bg-transparent">
             <label
               htmlFor="email"
@@ -25,6 +90,8 @@ export default function Login() {
             </label>
             <div className="mt-2 flex justify-center items-center bg-transparent">
               <input
+                onChange={handleChange}
+                value={email}
                 id="email"
                 name="email"
                 type="email"
@@ -55,6 +122,8 @@ export default function Login() {
             </div>
             <div className="mt-2 bg-transparent flex justify-center items-center">
               <input
+                onChange={handleChange}
+                value={password}
                 id="password"
                 name="password"
                 type="password"

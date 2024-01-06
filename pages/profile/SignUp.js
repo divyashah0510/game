@@ -3,43 +3,51 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function SignUp() {
-  const [name, setname] = useState();
+  const [username, setusername] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
   // Handling Change Function
   const handleChange = (e) => {
-    if (e.target.name === "name") {
-      setname(e.target.value);
-    } else if (e.target.email === "email") {
-      setEmail(e.target.value);
-    } else if (e.target.password === "password") {
-      setPassword(e.target.value);
+    const { name, value } = e.target;
+    if (name === "username") {
+      setusername(value);
+    } else if (name === "email") {
+      setEmail(value);
+    } else if (name === "password") {
+      setPassword(value);
     }
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = { name, email, password };
-    let res = await fetch("http://localhost:3000/api/addUser", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-    let response = await res.json();
-    console.log(response);
-    setEmail("");
-    setname("");
-    setPassword("");
-    toast.success("🦄 Account created Successfully!", {
-      position: "bottom-center",
-      autoClose: 7000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
+    const data = { username, email, password };
+    try {
+      const response = await fetch("http://localhost:3000/api/signup", {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      console.log("Success:", result);
+      setEmail("");
+      setusername("");
+      setPassword("");
+      toast.success("🦄 Account created Successfully!", {
+        position: "bottom-center",
+        autoClose: 7000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -78,19 +86,19 @@ export default function SignUp() {
         >
           <div className="bg-transparent">
             <label
-              htmlFor="name"
+              htmlFor="username"
               className="block text-base font-medium leading-6 text-green-800 bg-transparent"
             >
               Full Name
             </label>
             <div className="mt-2 flex justify-center items-center bg-transparent">
               <input
-                value={name}
+                value={username}
                 onChange={handleChange}
-                id="name"
-                name="name"
-                type="name"
-                autoComplete="name"
+                id="username"
+                name="username"
+                type="username"
+                autoComplete="username"
                 placeholder=" Divya Shah"
                 required
                 className=" bg-transparent border-green-600 w-[99%] rounded-md border-0 py-1.5 text-green-600 shadow-sm ring-1 ring-inset ring-green-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
