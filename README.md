@@ -32,7 +32,7 @@ In Balance Yoda, players will encounter a dynamic elliptical plane that adds an 
 
 ## Getting Started
 
-To start playing Balance Yoda, simply visit [BalanceYoda.com](link-to-app) and embark on an epic balancing journey with Yoda.
+To start playing Balance Yoda, simply download my source code [BalanceYoda.com](link-to-app) and embark on an epic balancing journey with Yoda.
 
 ## Licensing
 
@@ -48,7 +48,7 @@ If you encounter any issues while playing Balance Yoda, please report them on th
 
 ## Acknowledgments
 
-- Yoda character design by [Artist Name](link-to-artist-portfolio)
-- Elliptical plane concept inspired by [Source](link-to-source)
+- Yoda character design by [Artist Name](https://portfolio-bice-delta-45.vercel.app/)
+- Dont Forget to give a star.
 
-May the Force guide you through the balancing challenges in Balance Yoda! Have fun playing!
+## May the Force guide you through the balancing challenges in Balance Yoda! Have fun playing!
