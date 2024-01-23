@@ -18,9 +18,9 @@ export default function Review() {
         <figure className="mt-10">
           <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9 bg-transparent bg-opacity-50">
             <p>
-              “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
-              in laborum sed rerum et corporis.”
+              "Thrilled with the service! Exceptional attention to detail, prompt
+              communication, and outstanding expertise. Exceeded expectations,
+              highly recommend!"
             </p>
           </blockquote>
           <figcaption className="mt-10">
@@ -40,9 +40,7 @@ export default function Review() {
               >
                 <circle cx={1} cy={1} r={1} />
               </svg>
-              <div className="text-gray-400">
-                CEO of Infinity
-              </div>
+              <div className="text-gray-400">CEO of Infinity</div>
             </div>
           </figcaption>
         </figure>

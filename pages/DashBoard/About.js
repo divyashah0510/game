@@ -26,17 +26,18 @@ const About = () => {
         <div className="mx-auto px-6 lg:px-8 bg-transparent">
           <div className="mx-auto max-w-2xl lg:text-center bg-transparent">
             <h2 className="text-lg font-bold p-3 leading-7 text-green-600 bg-transparent">
-              Join Us
+              Join Us Today
             </h2>
             <p className="mt-2 text-4xl font-extrabold tracking-tight text-white homeGlow bg-transparent ">
               Everything you need to play this game
             </p>
             <p className="mt-9 text-lg leading-8 text-gray-400 bg-transparent">
-              Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-              Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-              at. In mi viverra elit nunc.
+              Discover your path to greatness. Get valuable insights and
+              strength through our offerings. The support you need is within
+              you. Embrace it. Elevate your experience with our community.
             </p>
           </div>
+
           <div className="mx-auto mt-6 max-w-2xl sm:mt-10 lg:mt-10 lg:max-w-7xl bg-transparent">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16 bg-transparent">
               <div className="relative pl-16 bg-transparent">
@@ -57,11 +58,12 @@ const About = () => {
                       />
                     </svg>
                   </div>
-                  First Heading
+                  Wise Wisdom
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-gray-400 bg-transparent">
-                  Morbi viverra dui mi arcu sed. Tellus semper adipiscing
-                  suspendisse semper morbi. Odio urna massa nunc massa.
+                  Knowledge, you seek. Tellus semper adipiscing, the path to
+                  enlightenment it reveals. Suspendisse semper morbi, wisdom it
+                  imparts. Odio urna massa, a Yoda you become.
                 </dd>
               </div>
               <div className="relative pl-16 bg-transparent">
@@ -82,11 +84,12 @@ const About = () => {
                       />
                     </svg>
                   </div>
-                  Second Heading
+                  Journey of Discovery
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-gray-400 bg-transparent">
-                  Sit quis amet rutrum tellus ullamcorper ultricies libero dolor
-                  eget. Sem sodales gravida quam turpis enim lacus amet.
+                  Discover your path, you will. Sit quis amet rutrum, a world of
+                  possibilities it unfolds. Ullamcorper ultricies libero dolor
+                  eget, the force within you it is.
                 </dd>
               </div>
               <div className="relative pl-16 bg-transparent">
@@ -107,11 +110,12 @@ const About = () => {
                       />
                     </svg>
                   </div>
-                  Third Heading
+                  Funny Path
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-gray-400 bg-transparent">
                   Quisque est vel vulputate cursus. Risus proin diam nunc
-                  commodo. Lobortis auctor congue commodo diam neque.
+                  commodo. Lobortis auctor congue commodo diam neque. The path
+                  ahead, challenging it may be, but strength within you lies.
                 </dd>
               </div>
               <div className="relative pl-16 bg-transparent">
@@ -132,12 +136,12 @@ const About = () => {
                       />
                     </svg>
                   </div>
-                  Fourth Heading
+                  The Journey Within
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-gray-400 bg-transparent">
                   Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt
                   mattis aliquet hac quis. Id hac maecenas ac donec pharetra
-                  eget.
+                  eget. The journey within, a profound one it is.
                 </dd>
               </div>
             </dl>

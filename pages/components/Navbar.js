@@ -52,14 +52,14 @@ export function Navbar() {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end bg-transparent">
+          {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end bg-transparent">
             <a
               href="/profile/SignUp"
               className="text-xl font-extrabold leading-8 text-white navigateLinks bg-transparent"
             >
               Log in &rarr;
             </a>
-          </div>
+          </div> */}
         </nav>
         <Dialog
           as="div"

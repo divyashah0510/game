@@ -33,7 +33,7 @@ const Footer = () => {
             />
           </a>
           <a
-            href="https://www.linkedin.com/in/divya-shah22"
+            href="https://www.linkedin.com/in/divya-d-shah"
             className="bg-transparent text-gray-800 hover:text-blue-600"
           >
             <FontAwesomeIcon
